@@ -1,12 +1,28 @@
-<html ng-app>
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
 <head>
-	<title>Demo</title>
+	<title>Aiport App</title>
 	<script type="text/javascript" src="js/lib/angular.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/controller/app.js"></script>	
 </head>
 <body>
-	<h1>Welcome {{name}}!</h1>
-	<input placeholder="type your name..." ng-model="name" />
+	<div class="container" ng-controller="AppCtrl">
+		<h1>Airport</h1>
+		
+		<div class="pull-left span6">
+			<ul ng-repeat="airport in airports">
+				<li>
+					<a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.name}}</a> 
+					- <a href="" ng-click="editAirport(airport.code)">Edit</a>
+				</li>
+			</ul>
+		</div>
+		
+		<ng-include class="span5" ng-include src="sidebarURL"></ng-include>
+		<ng-include class="span12" ng-include src="formURL"></ng-include>		
+	</div>
 </body>
 </html>
