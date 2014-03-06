@@ -37,6 +37,13 @@ airportApp.controller('AppCtrl', function($scope){
 		};
 	
 	
+		$scope.setActive = function(destinationType) {
+			$scope.destinationsActive = '';
+			$scope.flightsActive = '';
+			$scope.reservationsActive = '';
+			
+			$scope[destinationType + 'Active'] = 'active';
+		};
 });
 
 
