@@ -1,9 +1,9 @@
-var airlineServices = angular.module('airlineServices', ['ngResource']);
+var airlineService = angular.module('airlineService', ['ngResource']);
 
-airlineServices.factory('airportFactory', airportFactory);
+airlineService.factory('airportFactory', airportFactory);
 
 function airportFactory($resource) {
-	return $resource('/airports');	
+	return $resource('/airports/:airportCode');	
 }
 
 

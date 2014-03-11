@@ -6,8 +6,8 @@ function destinationsCtrl($scope, airportFactory) {
 	$scope.sidebarURL = 'partials/airport.html';
 	$scope.currentAirport = null;
 
-	$scope.setAirport = function(code) {
-		$scope.currentAirport = $scope.airports[code];
+	$scope.showClickedAirport = function(code) {
+		$scope.currentAirport = airportFactory.get({airportCode: code});
 	};
 	
 	$scope.airports = airportFactory.query();

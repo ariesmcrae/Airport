@@ -1,5 +1,5 @@
 app.controller(airportCtrl);
 
-function airportCtrl ($scope, $routeParams) {
-	$scope.currentAirport = $scope.airports[$routeParams.airportCode];
+function airportCtrl ($scope, $routeParams, airportFactory) {
+	$scope.currentAirport = airportFactory.get({airportCode: $routeParams.airportCode});
 }

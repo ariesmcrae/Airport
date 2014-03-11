@@ -1,4 +1,7 @@
-var app = angular.module('app', ['airlineServices']);
+//This is the parent module. We're injecting airlineService here so that 
+//destination.js can use the airlineService's airportFactory.
+
+var app = angular.module('app', ['airlineService']);
 	
 app.config(airlineRouter);
 

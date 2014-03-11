@@ -1,3 +1,4 @@
+//This is the parent controller. It has child controllers such as airport, destinations, flights, reservations.
 app.controller(appCtrl);
 
 function appCtrl($scope) {
