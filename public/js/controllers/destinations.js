@@ -1,6 +1,6 @@
 app.controller(destinationsCtrl);
 
-function destinationsCtrl($scope) {
+function destinationsCtrl($scope, airportFactory) {
 	$scope.setActive('destinations');
 
 	$scope.sidebarURL = 'partials/airport.html';
@@ -9,4 +9,8 @@ function destinationsCtrl($scope) {
 	$scope.setAirport = function(code) {
 		$scope.currentAirport = $scope.airports[code];
 	};
+	
+	$scope.airports = airportFactory.query();
 }
+
+
