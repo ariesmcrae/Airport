@@ -1,7 +1,7 @@
 Airport
 =======
 
-A toy app to help me learn Angular.
+AngularJS app.
 
 Pre-requisites:
 NodeJs
