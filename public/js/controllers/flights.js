@@ -1,6 +1,6 @@
 app.controller(flightsCtrl);
 
-function flightsCtrl ($scope) {
+function flightsCtrl ($scope, flightFactory) {
 	$scope.setActive('flights');
-	$scope.airports = {};
+	$scope.flights = flightFactory.query();
 }
